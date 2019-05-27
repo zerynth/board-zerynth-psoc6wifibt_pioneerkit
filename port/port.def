@@ -1,0 +1,234 @@
+/* Port definition */
+
+////LAYOUT: 
+////PERIPHERALS: SERIAL0 SERIAL1 SERIAL2 SERIAL3 I2C0 I2C1 I2C2 I2C3 SPI0 SPI1 SPI2 SPI3 ADC0 PWMD0
+////CDEFINES: CY8C6247BZI_D54
+
+const PinInfo const _vhalpinmap[] STORED = {
+    /* arduino uno digital connector */
+    /* D0   */ MAKE_PIN(PF, 0, HAS_EXT | HAS_SER | HAS_I2C | HAS_SPI), /* SCB5 RX | SCB5 SCL | SCB5 SPI_MOSI */
+    /* D1   */ MAKE_PIN(PF, 1, HAS_EXT | HAS_SER | HAS_I2C | HAS_SPI), /* SCB5 TX | SCB5 SDA | SCB5 SPI_MISO */
+    /* D2   */ MAKE_PIN(PF, 2, HAS_EXT | HAS_SPI),                     /* SCB5 RTS | SCB5 SPI_CLK */
+    /* D3   */ MAKE_PIN(PF, 3, HAS_EXT),                               /* SCB5 CTS  */
+    /* D4   */ MAKE_PIN(PF, 4, HAS_EXT | HAS_PWM), 
+    /* D5   */ MAKE_PIN(PF, 5, HAS_EXT), 
+    /* D6   */ MAKE_PIN(PF, 6, HAS_EXT | HAS_PWM), 
+    /* D7   */ MAKE_PIN(PA, 2, HAS_EXT), 
+    /* D8   */ MAKE_PIN(PN, 0, HAS_EXT | HAS_SER | HAS_I2C),           /* SCB6 SCL | SCB6 RX */
+    /* D9   */ MAKE_PIN(PN, 1, HAS_EXT | HAS_SER | HAS_I2C),           /* SCB6 SDA | SCB6 TX */
+    /* D10  */ MAKE_PIN(PM, 3, HAS_EXT),                               /* SCB6 CTS  */
+    /* D11  */ MAKE_PIN(PM, 0, HAS_EXT | HAS_PWM | HAS_SPI),           /* SCB6 SPI_MOSI */
+    /* D12  */ MAKE_PIN(PM, 1, HAS_EXT | HAS_SPI),                     /* SCB6 SPI_MISO */
+    /* D13  */ MAKE_PIN(PM, 2, HAS_EXT | HAS_SPI),                     /* SCB6 SPI_SCK | SCB6 RTS  */
+    /* D14  */ MAKE_PIN(PG, 1, HAS_EXT | HAS_SER | HAS_I2C | HAS_SPI), /* SCB3 SDA | SCB3 TX | SCB3 SPI_MISO */
+    /* D15  */ MAKE_PIN(PG, 0, HAS_EXT | HAS_SER | HAS_I2C | HAS_SPI), /* SCB3 SCL | SCB3 RX | SCB3 SPI_MOSI */
+    
+    /* internal arduino uno analog connector */ 
+    /* D16  */ MAKE_PIN(PN, 7, HAS_EXT | HAS_PWM),                     /* LED3 */
+    /* D17  */ MAKE_PIN(PJ, 7, HAS_EXT), 
+    /* D18  */ MAKE_PIN(PJ, 6, HAS_EXT | HAS_PWM), 
+    /* D19  */ MAKE_PIN(PJ, 5, HAS_EXT | HAS_PWM), 
+    /* D20  */ MAKE_PIN(PJ, 4, HAS_EXT), 
+    /* D21  */ MAKE_PIN(PJ, 3, HAS_EXT),                               /* SCB2 CTS  */
+    /* D22  */ MAKE_PIN(PJ, 2, HAS_EXT | HAS_SPI),                     /* SCB2 RTS | SCB2 SPI_CLK */
+    /* D23  */ MAKE_PIN(PJ, 1, HAS_EXT | HAS_SER | HAS_I2C | HAS_SPI), /* SCB2 TX  | SCB2 SDA | SCB2 SPI_MISO */
+    /* D24  */ MAKE_PIN(PJ, 0, HAS_EXT | HAS_SER | HAS_I2C | HAS_SPI), /* SCB2 RX  | SCB2 SCL | SCB2 SPI_MOSI */      
+    
+    /* not soldered 2x4 bottom arduino uno digital connector */ 
+    /* D25  */ MAKE_PIN(PK, 7, HAS_EXT | HAS_ADC),
+    /* D26  */ MAKE_PIN(PF, 7, HAS_EXT), 
+    /* D27  */ MAKE_PIN(PE, 1, HAS_EXT), 
+    /* D28  */ MAKE_PIN(PN, 5, HAS_EXT), 
+    /* D29  */ MAKE_PIN(PN, 4, HAS_EXT | HAS_PWM), 
+    /* D30  */ MAKE_PIN(PN, 3, HAS_EXT), 
+    /* D31  */ MAKE_PIN(PN, 2, HAS_EXT), 
+
+    /* external arduino uno digital connector */
+    /* D32  */ MAKE_PIN(PI, 0, HAS_EXT),                               
+    /* D33  */ MAKE_PIN(PI, 1, HAS_EXT),                               /* CAPSENSE BTN1 */
+    /* D34  */ MAKE_PIN(PI, 2, HAS_EXT),                               /* CAPSENSE BTN2 */
+    /* D35  */ MAKE_PIN(PI, 3, HAS_EXT),                               /* CAPSENSE SLIDER0 */
+    /* D36  */ MAKE_PIN(PI, 4, HAS_EXT),                               /* CAPSENSE SLIDER1 */
+    /* D37  */ MAKE_PIN(PI, 5, HAS_EXT),                               /* CAPSENSE SLIDER2 */
+    /* D38  */ MAKE_PIN(PI, 6, HAS_EXT),                               /* CAPSENSE SLIDER3 */
+    /* D39  */ MAKE_PIN(PI, 7, HAS_EXT),                               /* CAPSENSE SLIDER4 */
+    /* D40  */ MAKE_PIN(PB, 5, HAS_EXT | HAS_PWM),                     /* LED4 */
+    /* D41  */ MAKE_PIN(PB, 4, HAS_EXT | HAS_PWM), 
+    /* D42  */ MAKE_PIN(PB, 3, HAS_EXT), 
+    /* D43  */ MAKE_PIN(PB, 2, HAS_EXT),  
+    /* D44  */ MAKE_PIN(PB, 0, HAS_EXT),                               /* CAP_TX */  
+    /* D45  */ MAKE_PIN(PM, 7, HAS_EXT), 
+    /* D46  */ MAKE_PIN(PM, 6, HAS_EXT), 
+    /* D47  */ MAKE_PIN(PM, 5, HAS_EXT), 
+    /* D48  */ MAKE_PIN(PM, 4, HAS_EXT), 
+
+    /* bottom arduino uno analog connector */
+    /* D49  */ MAKE_PIN(PN, 6, HAS_EXT), 
+    /* D50  */ MAKE_PIN(PG, 3, HAS_EXT | HAS_PWM), 
+    /* D51  */ MAKE_PIN(PG, 2, HAS_EXT | HAS_SPI),                     /* SCB3 SPI_CLK */
+    /* D52  */ MAKE_PIN(PK, 6, HAS_EXT | HAS_ADC), 
+
+    /* external arduino uno power connector */
+    /* D53  */ MAKE_PIN(PH, 7, HAS_EXT), 
+    /* D54  */ MAKE_PIN(PH, 6, HAS_EXT), 
+    /* D55  */ MAKE_PIN(PH, 5, HAS_EXT), 
+    /* D56  */ MAKE_PIN(PH, 4, HAS_EXT | HAS_PWM), 
+    /* D57  */ MAKE_PIN(PH, 3, HAS_EXT), 
+    /* D58  */ MAKE_PIN(PH, 0, HAS_EXT), 
+    /* D59  */ MAKE_PIN(PL, 2, HAS_EXT),                               /* CS QSPI Flash */
+    /* D60  */ MAKE_PIN(PL, 0, HAS_EXT),                               /* CS FRAM */ 
+
+    /* Leds */
+    /* D61  */ MAKE_PIN(PL, 1, HAS_EXT | HAS_PWM),                     /* RGB BLUE  */
+    /* D62  */ MAKE_PIN(PA, 3, HAS_EXT | HAS_PWM),                     /* RGB RED   */
+    /* D63  */ MAKE_PIN(PB, 1, HAS_EXT | HAS_PWM),                     /* RGB GREEN */
+
+    /* QSPI Flash / FRAM */
+    /* D64  */ MAKE_PIN(PL, 7, HAS_EXT),                               /* SCK QSPI Flash */
+    /* D65  */ MAKE_PIN(PL, 6, HAS_EXT),                               /* SI/IO0 QSPI Flash */
+    /* D66  */ MAKE_PIN(PL, 5, HAS_EXT),                               /* SO/IO1 QSPI Flash */
+    /* D67  */ MAKE_PIN(PL, 4, HAS_EXT),                               /* WP/IO2 QSPI Flash */
+    /* D68  */ MAKE_PIN(PL, 3, HAS_EXT),                               /* HOLD/IO3 QSPI Flash */
+
+    /* Wi-Fi Interface */
+    /* D69  */ MAKE_PIN(PC, 0, HAS_EXT),                               /* SDIO_DATA0 */
+    /* D70  */ MAKE_PIN(PC, 1, HAS_EXT),                               /* SDIO_DATA1 */
+    /* D71  */ MAKE_PIN(PC, 2, HAS_EXT),                               /* SDIO_DATA2 */
+    /* D72  */ MAKE_PIN(PC, 3, HAS_EXT),                               /* SDIO_DATA3 */
+    /* D73  */ MAKE_PIN(PC, 4, HAS_EXT),                               /* SDIO_CMD */
+    /* D74  */ MAKE_PIN(PC, 5, HAS_EXT),                               /* SDIO_CLK */
+
+    /* Wi-Fi/BT Module */
+    /* D75  */ MAKE_PIN(PC, 6, HAS_EXT),                               /* WL_REG_ON */
+    /* D76  */ MAKE_PIN(PC, 7, HAS_EXT),                               /* WL_HOST_WAKE */
+    /* D77  */ MAKE_PIN(PD, 0, HAS_EXT),                               /* BT_UART_TXD */
+    /* D78  */ MAKE_PIN(PD, 1, HAS_EXT),                               /* BT_UART_RXD */
+    /* D79  */ MAKE_PIN(PD, 2, HAS_EXT),                               /* BT_UART_CTS */
+    /* D80  */ MAKE_PIN(PD, 3, HAS_EXT),                               /* BT_UART_RTS */
+    /* D81  */ MAKE_PIN(PD, 4, HAS_EXT),                               /* BT_REG_ON */
+    /* D82  */ MAKE_PIN(PD, 5, HAS_EXT),                               /* BT_HOST_WAKE */
+    /* D83  */ MAKE_PIN(PE, 0, HAS_EXT),                               /* BT_DEV_WAKE */
+
+    /* BTN0 */
+    /* D84  */ MAKE_PIN(PA, 4, HAS_EXT),                               /* BTN0 */
+
+    /* WCO */
+    /* D85  */ MAKE_PIN(PA, 0, HAS_EXT),                               /* CR1 */
+    /* D86  */ MAKE_PIN(PA, 1, HAS_EXT),                               /* CR2 */
+    
+    /* JTAG Interface */
+    /* D87  */ MAKE_PIN(PG, 4, HAS_EXT),                               /* TDO_SWO */
+    /* D88  */ MAKE_PIN(PG, 5, HAS_EXT),                               /* TDI */
+    /* D89  */ MAKE_PIN(PG, 6, HAS_EXT),                               /* TMS_SWDIO */
+    /* D90  */ MAKE_PIN(PG, 7, HAS_EXT),                               /* TCLK_SWCLK */
+
+    /* PMIC_EN */
+    /* D91  */ MAKE_PIN(PA, 5, HAS_EXT),
+
+    /* CINT */
+    /* D92  */ MAKE_PIN(PH, 1, HAS_EXT),                               /* A */
+    /* D93  */ MAKE_PIN(PH, 2, HAS_EXT),                               /* B */
+
+    /* CDC - USB */
+    /* D94  */ MAKE_PIN(PO, 0, HAS_EXT),                               /* USBDP */
+    /* D95  */ MAKE_PIN(PO, 1, HAS_EXT),                               /* USBDM */
+
+    /* arduino uno analog connector */
+    /* A5   */ MAKE_PIN(PK, 5, HAS_EXT | HAS_ADC), 
+    /* A4   */ MAKE_PIN(PK, 4, HAS_EXT | HAS_ADC),      
+    /* A3   */ MAKE_PIN(PK, 3, HAS_EXT | HAS_ADC),       
+    /* A2   */ MAKE_PIN(PK, 2, HAS_EXT | HAS_ADC),       
+    /* A1   */ MAKE_PIN(PK, 1, HAS_EXT | HAS_ADC),  
+    /* A0   */ MAKE_PIN(PK, 0, HAS_EXT | HAS_ADC),      
+};
+
+const PinClass const _analogclass[] STORED = {
+   /* ADC0 */ MAKE_PIN_CLASS(101, 0, 0, 0),
+   /* ADC1 */ MAKE_PIN_CLASS(100, 1, 0, 0),
+   /* ADC2 */ MAKE_PIN_CLASS(99, 2, 0, 0),
+   /* ADC3 */ MAKE_PIN_CLASS(98, 3, 0, 0),
+   /* ADC4 */ MAKE_PIN_CLASS(97, 4, 0, 0),
+   /* ADC5 */ MAKE_PIN_CLASS(95, 5, 0, 0),
+   /* ADC6 */ MAKE_PIN_CLASS(52, 6, 0, 0),
+   /* ADC7 */ MAKE_PIN_CLASS(25, 7, 0, 0),
+};
+
+const PinClass const _spiclass[] STORED = {
+    /* pin_num, scb, alt_fn */
+    /* MOSI0  */ MAKE_PIN_CLASS(0, 5, 8, 0),
+    /* MISO0  */ MAKE_PIN_CLASS(1, 5, 8, 0),
+    /* SCLK0  */ MAKE_PIN_CLASS(2, 5, 8, 0),
+    /* MOSI1  */ MAKE_PIN_CLASS(11, 6, 8, 0),
+    /* MISO1  */ MAKE_PIN_CLASS(12, 6, 8, 0),
+    /* SCLK1  */ MAKE_PIN_CLASS(13, 6, 8, 0),
+    /* MOSI2  */ MAKE_PIN_CLASS(15, 3, 8, 0),
+    /* MISO2  */ MAKE_PIN_CLASS(14, 3, 8, 0),
+    /* SCLK2  */ MAKE_PIN_CLASS(51, 3, 8, 0),
+    /* MOSI3  */ MAKE_PIN_CLASS(24, 2, 8, 0),
+    /* MISO3  */ MAKE_PIN_CLASS(23, 2, 8, 0),
+    /* SCLK3  */ MAKE_PIN_CLASS(22, 2, 8, 0),
+};
+
+const PinClass const _i2cclass[] STORED = {
+    /* pin_num, i2c, alt_fn */
+    /* SDA0  */ MAKE_PIN_CLASS(1, 5, 7, 0),
+    /* SCL0  */ MAKE_PIN_CLASS(0, 5, 7, 0),   
+    /* SDA1  */ MAKE_PIN_CLASS(9, 6, 7, 0),
+    /* SCL1  */ MAKE_PIN_CLASS(8, 6, 7, 0),      
+    /* SDA2  */ MAKE_PIN_CLASS(14, 3, 7, 0),
+    /* SCL2  */ MAKE_PIN_CLASS(15, 3, 7, 0),
+    /* SDA3  */ MAKE_PIN_CLASS(23, 2, 7, 0),
+    /* SCL3  */ MAKE_PIN_CLASS(24, 2, 7, 0),
+};
+
+const PinClass const _pwmclass[] STORED = {
+    /* pin_num, timer, channel, alt_fn */
+    /* PWM0  */ MAKE_PIN_CLASS(4, 0, 6, 0),
+    /* PWM1  */ MAKE_PIN_CLASS(6, 0, 7, 0),
+    /* PWM2  */ MAKE_PIN_CLASS(11, 1, 4, 1),
+    /* PWM3  */ MAKE_PIN_CLASS(16, 1, 11, 1),
+    /* PWM4  */ MAKE_PIN_CLASS(18, 0, 0, 0),
+    /* PWM5  */ MAKE_PIN_CLASS(19, 0, 1, 0),
+    /* PWM6  */ MAKE_PIN_CLASS(29, 0, 2, 0),
+    /* PWM7  */ MAKE_PIN_CLASS(40, 0, 5, 0),
+    /* PWM8  */ MAKE_PIN_CLASS(41, 1, 13, 1),
+    /* PWM9  */ MAKE_PIN_CLASS(50, 1, 9, 1),
+    /* PWM10 */ MAKE_PIN_CLASS(56, 1, 14, 1),
+    /* PWM11 */ MAKE_PIN_CLASS(61, 1, 1, 1),
+    /* PWM12 */ MAKE_PIN_CLASS(62, 0, 1, 0),
+    /* PWM13 */ MAKE_PIN_CLASS(63, 1, 3, 1),
+};
+
+const PinClass const _icuclass[] STORED = {
+};
+
+const PinClass const _canclass[] STORED = {
+};
+
+const PinClass const _serclass[] STORED = {
+    /* pin_num, usart, alternate fn */
+    /* RX0 */ MAKE_PIN_CLASS(0, 5, 6, 0),
+    /* TX0 */ MAKE_PIN_CLASS(1, 5, 6, 0),
+    /* RX1 */ MAKE_PIN_CLASS(8, 6, 6, 0),
+    /* TX1 */ MAKE_PIN_CLASS(9, 6, 6, 0),
+    /* RX2 */ MAKE_PIN_CLASS(15, 3, 6, 0),
+    /* TX2 */ MAKE_PIN_CLASS(14, 3, 6, 0),
+    /* RX3 */ MAKE_PIN_CLASS(24, 2, 6, 0),
+    /* TX3 */ MAKE_PIN_CLASS(23, 2, 6, 0),
+};
+
+const PinClass const _dacclass[] STORED = {
+};
+
+const PinClass const _ledclass[] STORED = {
+    /* LED0 */ MAKE_PIN_CLASS(61, 0, 0, 0),
+    /* LED1 */ MAKE_PIN_CLASS(62, 0, 0, 0),
+    /* LED2 */ MAKE_PIN_CLASS(63, 0, 0, 0),
+    /* LED3 */ MAKE_PIN_CLASS(16, 0, 0, 0),
+    /* LED4 */ MAKE_PIN_CLASS(40, 0, 0, 0),
+};
+
+const PinClass const _btnclass[] STORED = {
+    /* BTN0 */ MAKE_PIN_CLASS(84, 0, 0, 0),
+};
+
