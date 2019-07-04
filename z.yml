@@ -1,0 +1,16 @@
+---
+description: Add support for PSoC6 WiFi-Bt Pioneer Kit
+fullname: board.zerynth.psoc6wifibt_pioneerkit
+info:
+    board: PSoC6 WiFi-Bt Pioneer Kit
+    chip_manufacturer: Cypress
+    device: PSoC62
+    family_type: ARM Cortex M4
+keywords:
+- board
+- cypress
+- psoc6
+- wifi
+- bt
+title: PSoC6 WiFi-Bt Pioneer Kit Board Support Package
+...
